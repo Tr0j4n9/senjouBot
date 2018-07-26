@@ -35,7 +35,7 @@ async def on_ready():
 
    
 @bot.command(pass_context = True)
-    async def dm(ctx, member : discord.Member = None, *, message):
+async def dm(ctx, member : discord.Member = None, *, message):
     if not ctx.message.author.server_permissions.administrator:
         return
     if not member:
